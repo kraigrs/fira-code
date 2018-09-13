@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fira Code</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Kraig Stevenson" />
+    <meta name="date" content="2018-09-13" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Fira Code
+## … and why you should care
+### Kraig Stevenson
+### September 13, 2018
+
+---
+
+
+
+
+# Introduction
+
+* Pizza Scientist with data problems @dominos
+
+* Franchise Development
+  + where to build new stores?
+  + how well those new stores will do?
+
+* Supply Chain
+  + what/how many items should stores order for the next 8 weeks?
+  + how to help distribution centers anticipate those orders?
+
+* Deploying ML into production
+  + navigating complex eCommerce platform
+  + containerized microservices
+---
+
+# What is Fira Code?
+
+* monospaced font with programming ligatures
+* ligatures are Unicode symbols for certain operators
+* Fira Code is a great font even without ligatures!
+
+.center[![](images/all_ligatures.png)]
+---
+
+# Why use ligatures?
+
+* interpret multiple characters into a single symbol (or glyph)
+* save a little space
+* fonts have advanced enough to address this
+
+.center[![](images/code-wo-ligatures.png) ![](images/code-w-ligatures.png)]
+---
+
+# Why use ligatures?
+
+## **tl;dr** they make code look pretty
+
+.center[![](images/pretty-pic.png)]
+---
+
+# Enabling ligatures in RStudio
+
+* Tools --&gt; Global Options --&gt; Appearance
+
+.center[![](images/rstudio.png)]
+---
+
+# What I don't like about ligatures
+
+* Unicode characters don't line up well with other single characters
+  + is it still monospace?
+* hard to distinguish similar glyphs
+* known issues with certain Unix systems
+  + https://github.com/tonsky/FiraCode/issues/4
+  + solved with `sudo apt install fonts-firacode`
+
+.center[![](images/gripe.png)]
+---
+
+# Lots of other tools can use ligatures
+
+* JetBrains
+* Atom
+* BBEdit/TextWrangler
+* Notepad++
+* SublimeText
+* Spyder
+
+.center[![](images/change-my-mind.jpg) ![](images/drake-fira.jpg)]
+---
+
+# Links
+
+* https://github.com/tonsky/FiraCode
+* https://medium.com/larsenwork-andreas-larsen/ligatures-coding-fonts-5375ab47ef8e
+* https://www.danclarke.com/fira-code
+* https://www.hanselman.com/blog/MonospacedProgrammingFontsWithLigatures.aspx
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
